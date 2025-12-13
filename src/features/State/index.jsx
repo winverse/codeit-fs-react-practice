@@ -1,28 +1,38 @@
-import styles from "./JsxBasics.module.css";
+import styles from "./State.module.css";
 import Solution from "./Solution";
-// import Exersise from './Exercise'; // 코드 수정후에 주석을 해제해주세요! */}
+import Exercise from "./Exercise";
 
-export default function JsxBasics() {
+export default function State() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h2 className={styles.title}>📝 JSX 기초 실습</h2>
+        <h2 className={styles.title}>🔄 State</h2>
       </div>
 
       <div className={styles.goal}>
         <h3 className={styles.goalTitle}>🎯 목표</h3>
         <p className={styles.goalText}>
-          To-Do List 컴포넌트를 만드세요. 아래 요구사항을
-          모두 충족해야 합니다:
+          useState를 사용하여 컴포넌트의 상태를 관리하고,
+          사용자 입력에 반응하는 기능을 구현하세요:
         </p>
         <ul className={styles.requirements}>
-          <li>제목: "오늘의 할 일"</li>
-          <li>할 일 입력란 (input)과 추가 버튼</li>
           <li>
-            할 일 목록 (ul/li): "리액트 기초 배우기", "JSX
-            규칙 이해하기"
+            <code>useState</code>로 todos와 inputText state
+            생성
           </li>
-          <li>JSX 문법 에러가 없어야 함</li>
+          <li>
+            input의 <code>value</code>,{" "}
+            <code>onChange</code> 연결하여 제어 컴포넌트
+            만들기
+          </li>
+          <li>
+            <code>handleAddTodo</code> 함수로 할 일 추가
+            기능 구현
+          </li>
+          <li>
+            Enter 키 처리 시 한글 입력 중(
+            <code>isComposing</code>) 체크
+          </li>
         </ul>
       </div>
 
@@ -31,7 +41,7 @@ export default function JsxBasics() {
           👀 현재 모습
         </h3>
         <div className={styles.previewBox}>
-          {/* <Exercise /> // 코드 수정후에 주석을 해제해주세요! */}
+          <Exercise />
         </div>
       </div>
 
@@ -50,15 +60,16 @@ export default function JsxBasics() {
           <span className={styles.fileName}>작업 파일</span>
         </div>
         <code className={styles.filePath}>
-          src/features/JsxBasics/Exercise.jsx
+          src/features/State/Exercise.jsx
         </code>
       </div>
 
       <div className={styles.hint}>
         <p>
-          💡 JSX 규칙: 최상위 요소는 하나로 감싸기, 모든
-          태그는 닫기 (<code>&lt;input /&gt;</code>), HTML
-          class 대신 <code>className</code> 사용하세요!
+          💡 State가 변경되면 React가 자동으로 리렌더링해요!{" "}
+          <code>setTodos</code>로 배열을 업데이트할 때는
+          불변성을 지켜주세요:{" "}
+          <code>[...prev, newItem]</code>
         </p>
       </div>
     </div>

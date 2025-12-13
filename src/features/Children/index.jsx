@@ -25,8 +25,8 @@ export default function Children() {
             <code>&lt;Panel&gt;</code>로 감싸기
           </li>
           <li>
-            샌드위치 비유: 빵(Panel)은 재사용, 속(children)은
-            변경
+            샌드위치 비유: 빵(Panel)은 재사용,
+            속(children)은 변경
           </li>
         </ul>
       </div>

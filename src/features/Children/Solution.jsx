@@ -2,11 +2,7 @@ import "./App.css";
 
 // Panel 컴포넌트: children을 받아서 감싸는 레이아웃 역할
 function Panel({ children }) {
-  return (
-    <section className="panel">
-      {children}
-    </section>
-  );
+  return <section className="panel">{children}</section>;
 }
 
 function App() {

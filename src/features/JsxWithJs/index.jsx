@@ -65,7 +65,10 @@ export default function JsxWithJs() {
 
       <div className={styles.hint}>
         <p>
-          💡 막히면 <code>Solution.jsx</code>를 확인하세요!
+          💡 JSX 안에서 JavaScript를 사용하려면 중괄호{" "}
+          <code>{"{}"}</code>를 사용하세요! 변수는{" "}
+          <code>{"{ title }"}</code>, 조건부는 삼항 연산자를
+          활용하세요.
         </p>
       </div>
     </div>

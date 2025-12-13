@@ -52,7 +52,9 @@ export default function CssBasics() {
 
       <div className={styles.hint}>
         <p>
-          💡 막히면 <code>Solution.jsx</code>를 확인하세요!
+          💡 CSS 파일을 <code>import './TodoApp.css'</code>
+          로 불러오고, HTML 요소에 <code>className</code>을
+          추가하세요!
         </p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // ✋ 여기서 JSX 실습을 진행하세요!
 // 아래 주석을 보고 코드를 작성해보세요.
 
-function TodoApp() {
+function Exersise() {
   return (
     // TODO 1: 모든 요소를 하나의 <div>로 감싸주세요
     // TODO 2: <input /> 태그를 셀프 클로징 형태로 작성하세요
@@ -27,4 +27,4 @@ function TodoApp() {
   );
 }
 
-export default TodoApp;
+export default Exersise;
