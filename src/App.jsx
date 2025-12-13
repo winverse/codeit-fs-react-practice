@@ -10,6 +10,7 @@ import Fragment from "./features/Fragment";
 import Children from "./features/Children";
 import State from "./features/State";
 import RefState from "./features/RefState";
+import ImageUsage from "./features/ImageUsage";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -23,6 +24,7 @@ function App() {
     { id: "children", label: "Children" },
     { id: "state", label: "State" },
     { id: "refstate", label: "참조형 State" },
+    { id: "image", label: "이미지 사용" },
   ];
 
   const renderContent = () => {
@@ -52,6 +54,8 @@ function App() {
         return <State />;
       case "refstate":
         return <RefState />;
+      case "image":
+        return <ImageUsage />;
       default:
         return <Placeholder title={sectionTitle} />;
     }
