@@ -7,6 +7,7 @@ import CssBasics from "./features/CssBasics";
 import JsxWithJs from "./features/JsxWithJs";
 import Props from "./features/Props";
 import Fragment from "./features/Fragment";
+import Children from "./features/Children";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -17,6 +18,7 @@ function App() {
     { id: "jsxjs", label: "JSX+JavaScript" },
     { id: "props", label: "Props" },
     { id: "fragment", label: "Fragment" },
+    { id: "children", label: "Children" },
   ];
 
   const renderContent = () => {
@@ -40,6 +42,8 @@ function App() {
         return <Props />;
       case "fragment":
         return <Fragment />;
+      case "children":
+        return <Children />;
       default:
         return <Placeholder title={sectionTitle} />;
     }
