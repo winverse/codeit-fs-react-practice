@@ -9,6 +9,7 @@ import Props from "./features/Props";
 import Fragment from "./features/Fragment";
 import Children from "./features/Children";
 import State from "./features/State";
+import RefState from "./features/RefState";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -21,6 +22,7 @@ function App() {
     { id: "fragment", label: "Fragment" },
     { id: "children", label: "Children" },
     { id: "state", label: "State" },
+    { id: "refstate", label: "참조형 State" },
   ];
 
   const renderContent = () => {
@@ -48,6 +50,8 @@ function App() {
         return <Children />;
       case "state":
         return <State />;
+      case "refstate":
+        return <RefState />;
       default:
         return <Placeholder title={sectionTitle} />;
     }
