@@ -1,24 +1,37 @@
-import styles from "./CssBasics.module.css";
+import styles from "./JsxWithJs.module.css";
 import Solution from "./Solution";
 import Exercise from "./Exercise";
 
-export default function CssBasics() {
+export default function JsxWithJs() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h2 className={styles.title}>🎨 CSS 스타일 적용</h2>
+        <h2 className={styles.title}>
+          🔗 JSX에서 JavaScript 사용하기
+        </h2>
       </div>
 
       <div className={styles.goal}>
         <h3 className={styles.goalTitle}>🎯 목표</h3>
         <p className={styles.goalText}>
-          CSS 파일을 import하고 className을 사용하여
-          스타일을 적용하세요:
+          중괄호 {"{}"} 를 사용하여 JSX 안에서 JavaScript를
+          활용하세요:
         </p>
         <ul className={styles.requirements}>
-          <li>TodoApp.css 파일을 import 하기</li>
-          <li>각 요소에 적절한 className 추가하기</li>
-          <li>스타일이 올바르게 적용되는지 확인하기</li>
+          <li>
+            변수 값 출력: <code>{"{title}"}</code> 형태로
+            변수 사용하기
+          </li>
+          <li>
+            함수 실행 결과 출력:{" "}
+            <code>
+              {"{new Date().toLocaleDateString()}"}
+            </code>
+          </li>
+          <li>
+            조건부 렌더링: 삼항 연산자로 할 일 유무에 따라
+            다른 UI 표시
+          </li>
         </ul>
       </div>
 
@@ -46,7 +59,7 @@ export default function CssBasics() {
           <span className={styles.fileName}>작업 파일</span>
         </div>
         <code className={styles.filePath}>
-          src/features/CssBasics/Exercise.jsx
+          src/features/JsxWithJs/Exercise.jsx
         </code>
       </div>
 

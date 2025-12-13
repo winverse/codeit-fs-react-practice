@@ -4,6 +4,7 @@ import Welcome from "./features/Welcome";
 import Placeholder from "./features/Placeholder";
 import JsxBasics from "./features/JsxBasics";
 import CssBasics from "./features/CssBasics";
+import JsxWithJs from "./features/JsxWithJs";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -11,6 +12,7 @@ function App() {
   const sections = [
     { id: "jsx", label: "JSX 기초" },
     { id: "css", label: "CSS 스타일" },
+    { id: "jsxjs", label: "JSX+JavaScript" },
   ];
 
   const renderContent = () => {
@@ -28,6 +30,8 @@ function App() {
         return <JsxBasics />;
       case "css":
         return <CssBasics />;
+      case "jsxjs":
+        return <JsxWithJs />;
       default:
         return <Placeholder title={sectionTitle} />;
     }
