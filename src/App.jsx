@@ -12,6 +12,7 @@ import State from "./features/State";
 import RefState from "./features/RefState";
 import ImageUsage from "./features/ImageUsage";
 import CssModule from "./features/CssModule";
+import ClsxUsage from "./features/ClsxUsage";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -27,6 +28,7 @@ function App() {
     { id: "refstate", label: "참조형 State" },
     { id: "image", label: "이미지 사용" },
     { id: "cssmodule", label: "CSS Module" },
+    { id: "clsx", label: "clsx" },
   ];
 
   const renderContent = () => {
@@ -60,6 +62,8 @@ function App() {
         return <ImageUsage />;
       case "cssmodule":
         return <CssModule />;
+      case "clsx":
+        return <ClsxUsage />;
       default:
         return <Placeholder title={sectionTitle} />;
     }
