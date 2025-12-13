@@ -5,6 +5,8 @@ import Placeholder from "./features/Placeholder";
 import JsxBasics from "./features/JsxBasics";
 import CssBasics from "./features/CssBasics";
 import JsxWithJs from "./features/JsxWithJs";
+import Props from "./features/Props";
+import Fragment from "./features/Fragment";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -13,6 +15,8 @@ function App() {
     { id: "jsx", label: "JSX 기초" },
     { id: "css", label: "CSS 스타일" },
     { id: "jsxjs", label: "JSX+JavaScript" },
+    { id: "props", label: "Props" },
+    { id: "fragment", label: "Fragment" },
   ];
 
   const renderContent = () => {
@@ -32,6 +36,10 @@ function App() {
         return <CssBasics />;
       case "jsxjs":
         return <JsxWithJs />;
+      case "props":
+        return <Props />;
+      case "fragment":
+        return <Fragment />;
       default:
         return <Placeholder title={sectionTitle} />;
     }
