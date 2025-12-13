@@ -1,0 +1,103 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.goal {
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.goalTitle {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+}
+
+.goalText {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.requirements {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.requirements li {
+  margin-bottom: 0.5rem;
+}
+
+.fileBox {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fileHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.fileIcon {
+  font-size: 1.5rem;
+}
+
+.fileName {
+  font-size: 1.2rem;
+}
+
+.filePath {
+  display: block;
+  font-size: 1.3rem;
+  color: #646cff;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.hint {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #fff9e6;
+  border-radius: 8px;
+}
+
+.hint p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.hint code {
+  background-color: #f4f4f4;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  color: #d63384;
+  font-size: 1em;
+  font-weight: 600;
+}

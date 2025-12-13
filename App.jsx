@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import Welcome from "./features/Welcome";
 import Placeholder from "./features/Placeholder";
+import JsxBasics from "./features/JsxBasics";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
@@ -22,11 +23,16 @@ function App() {
       return <Welcome />;
     }
 
-    // 각 섹션별 컴포넌트 렌더링 (나중에 추가될 예정)
-    const sectionTitle = sections.find(
-      (s) => s.id === activeSection
-    )?.label;
-    return <Placeholder title={sectionTitle} />;
+    // 각 섹션별 컴포넌트 렌더링
+    switch (activeSection) {
+      case "jsx":
+        return <JsxBasics />;
+      default:
+        const sectionTitle = sections.find(
+          (s) => s.id === activeSection
+        )?.label;
+        return <Placeholder title={sectionTitle} />;
+    }
   };
 
   return (
