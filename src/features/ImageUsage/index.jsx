@@ -6,7 +6,7 @@ export default function ImageUsage() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>이미지 사용하기</h1>
+        <h1 className={styles.title}>🖼️ 이미지 사용하기</h1>
       </div>
 
       <div className={styles.goal}>

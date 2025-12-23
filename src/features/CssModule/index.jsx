@@ -6,7 +6,7 @@ export default function CssModule() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title}>CSS Module</h1>
+        <h1 className={styles.title}>🎨 CSS Module</h1>
       </div>
 
       <div className={styles.goal}>
