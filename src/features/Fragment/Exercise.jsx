@@ -3,7 +3,7 @@
 // TODO: div를 Fragment로 바꾸세요!
 // Fragment는 <> ... </> 또는 <Fragment> ... </Fragment>로 사용할 수 있습니다.
 
-import "./TodoApp.css";
+import './TodoApp.css';
 
 // TodoItems 컴포넌트: 여러 개의 li를 반환
 function TodoItems({ todos }) {
@@ -22,25 +22,20 @@ function TodoItems({ todos }) {
 
 function App() {
   const todos = [
-    { id: 1, text: "리액트 기초 배우기" },
-    { id: 2, text: "Fragment 이해하기" },
-    { id: 3, text: "To-Do List 만들어보기" },
+    { id: 1, text: '리액트 기초 배우기' },
+    { id: 2, text: 'Fragment 이해하기' },
+    { id: 3, text: 'To-Do List 만들어보기' },
   ];
 
   return (
     <div className="app-container">
       <div className="title-container">
         <h1 className="title">오늘의 할 일</h1>
-        <p className="today">
-          {new Date().toLocaleDateString()}
-        </p>
+        <p className="today">{new Date().toLocaleDateString()}</p>
       </div>
 
       <section className="input-section">
-        <input
-          type="text"
-          placeholder="새로운 할 일을 입력하세요"
-        />
+        <input type="text" placeholder="새로운 할 일을 입력하세요" />
         <button>추가</button>
       </section>
 
@@ -52,16 +47,12 @@ function App() {
       </section>
 
       <div className="hint-box">
+        <p>💡 개발자 도구(F12)로 HTML 구조를 확인해보세요!</p>
         <p>
-          💡 개발자 도구(F12)로 HTML 구조를 확인해보세요!
+          div로 감싸면: <code>&lt;ul&gt; → &lt;div&gt; → &lt;li&gt;</code>
         </p>
         <p>
-          div로 감싸면:{" "}
-          <code>&lt;ul&gt; → &lt;div&gt; → &lt;li&gt;</code>
-        </p>
-        <p>
-          Fragment로 감싸면:{" "}
-          <code>&lt;ul&gt; → &lt;li&gt;</code>
+          Fragment로 감싸면: <code>&lt;ul&gt; → &lt;li&gt;</code>
         </p>
       </div>
     </div>

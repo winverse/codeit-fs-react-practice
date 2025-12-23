@@ -1,16 +1,12 @@
-import { useState } from "react";
-import { nanoid } from "nanoid";
-import trashIcon from "../../ImageUsage/assets/trash.svg";
-import panelStyles from "./Panel.module.css";
-import todoItemStyles from "./TodoItem.module.css";
-import appStyles from "./App.module.css";
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
+import trashIcon from '../../ImageUsage/assets/trash.svg';
+import panelStyles from './Panel.module.css';
+import todoItemStyles from './TodoItem.module.css';
+import appStyles from './App.module.css';
 
 function Panel({ children }) {
-  return (
-    <section className={panelStyles.panel}>
-      {children}
-    </section>
-  );
+  return <section className={panelStyles.panel}>{children}</section>;
 }
 
 function TodoItem({ todo, onToggle, onDelete }) {
@@ -18,7 +14,7 @@ function TodoItem({ todo, onToggle, onDelete }) {
     <li className={todoItemStyles.todoItem}>
       <span
         className={`${todoItemStyles.todoText} ${
-          todo.isDone ? todoItemStyles.done : ""
+          todo.isDone ? todoItemStyles.done : ''
         }`}
         onClick={() => onToggle(todo.id)}
       >
@@ -38,41 +34,38 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: nanoid(),
-      text: "리액트 기초 배우기",
+      text: '리액트 기초 배우기',
       isDone: true,
     },
     {
       id: nanoid(),
-      text: "CSS Module 익히기",
+      text: 'CSS Module 익히기',
       isDone: false,
     },
   ]);
 
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
 
   const handleInputChange = (event) => {
     setInputText(event.target.value);
   };
 
   const handleKeyDown = (event) => {
-    if (
-      event.key !== "Enter" ||
-      event.nativeEvent.isComposing
-    ) {
+    if (event.key !== 'Enter' || event.nativeEvent.isComposing) {
       return;
     }
     handleAddTodo();
   };
 
   const handleAddTodo = () => {
-    if (inputText.trim() === "") return;
+    if (inputText.trim() === '') return;
     const newTodo = {
       id: nanoid(),
       text: inputText,
       isDone: false,
     };
     setTodos((prev) => [...prev, newTodo]);
-    setInputText("");
+    setInputText('');
   };
 
   const handleDelete = (todoId) => {
@@ -82,10 +75,8 @@ function App() {
   const handleToggle = (todoId) => {
     setTodos((prev) =>
       prev.map((todo) =>
-        todo.id === todoId
-          ? { ...todo, isDone: !todo.isDone }
-          : todo
-      )
+        todo.id === todoId ? { ...todo, isDone: !todo.isDone } : todo,
+      ),
     );
   };
 
@@ -93,9 +84,7 @@ function App() {
     <div className={appStyles.appContainer}>
       <div className={appStyles.titleContainer}>
         <h1 className={appStyles.title}>오늘의 할 일</h1>
-        <p className={appStyles.today}>
-          {new Date().toLocaleDateString()}
-        </p>
+        <p className={appStyles.today}>{new Date().toLocaleDateString()}</p>
       </div>
 
       <Panel>
@@ -108,10 +97,7 @@ function App() {
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
           />
-          <button
-            className={appStyles.addButton}
-            onClick={handleAddTodo}
-          >
+          <button className={appStyles.addButton} onClick={handleAddTodo}>
             추가
           </button>
         </div>
@@ -119,9 +105,7 @@ function App() {
 
       <Panel>
         {todos.length === 0 ? (
-          <p className={appStyles.empty}>
-            할 일이 없습니다
-          </p>
+          <p className={appStyles.empty}>할 일이 없습니다</p>
         ) : (
           <ul className={appStyles.todoList}>
             {todos.map((todo) => (

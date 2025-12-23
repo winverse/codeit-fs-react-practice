@@ -1,6 +1,6 @@
-import styles from "./CssBasics.module.css";
-import Solution from "./Solution";
-import Exercise from "./Exercise";
+import styles from './CssBasics.module.css';
+import Solution from './Solution';
+import Exercise from './Exercise';
 
 export default function CssBasics() {
   return (
@@ -12,8 +12,7 @@ export default function CssBasics() {
       <div className={styles.goal}>
         <h3 className={styles.goalTitle}>🎯 목표</h3>
         <p className={styles.goalText}>
-          CSS 파일을 import하고 className을 사용하여
-          스타일을 적용하세요:
+          CSS 파일을 import하고 className을 사용하여 스타일을 적용하세요:
         </p>
         <ul className={styles.requirements}>
           <li>TodoApp.css 파일을 import 하기</li>
@@ -23,18 +22,14 @@ export default function CssBasics() {
       </div>
 
       <div className={styles.preview}>
-        <h3 className={styles.previewTitle}>
-          👀 현재 모습
-        </h3>
+        <h3 className={styles.previewTitle}>👀 현재 모습</h3>
         <div className={styles.previewBox}>
           <Exercise />
         </div>
       </div>
 
       <div className={styles.preview}>
-        <h3 className={styles.previewTitle}>
-          ✨ 완성 결과
-        </h3>
+        <h3 className={styles.previewTitle}>✨ 완성 결과</h3>
         <div className={styles.previewBox}>
           <Solution />
         </div>
@@ -52,9 +47,8 @@ export default function CssBasics() {
 
       <div className={styles.hint}>
         <p>
-          💡 CSS 파일을 <code>import './TodoApp.css'</code>
-          로 불러오고, HTML 요소에 <code>className</code>을
-          추가하세요!
+          💡 CSS 파일을 <code>import './TodoApp.css'</code>로 불러오고, HTML
+          요소에 <code>className</code>을 추가하세요!
         </p>
       </div>
     </div>

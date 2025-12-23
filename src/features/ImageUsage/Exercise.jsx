@@ -3,9 +3,9 @@
 // TODO 1: trash.svg 파일을 import 하세요
 // 힌트: import trashIcon from './assets/trash.svg';
 
-import { useState } from "react";
-import { nanoid } from "nanoid";
-import "./App.css";
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
+import './App.css';
 
 function Panel({ children }) {
   return <section className="panel">{children}</section>;
@@ -15,15 +15,12 @@ function TodoItem({ todo, onToggle, onDelete }) {
   return (
     <li className="todo-item">
       <span
-        className={`todo-text ${todo.isDone ? "done" : ""}`}
+        className={`todo-text ${todo.isDone ? 'done' : ''}`}
         onClick={() => onToggle(todo.id)}
       >
         {todo.text}
       </span>
-      <button
-        className="delete-button"
-        onClick={() => onDelete(todo.id)}
-      >
+      <button className="delete-button" onClick={() => onDelete(todo.id)}>
         {/* TODO 2: 텍스트(×) 대신 <img src={trashIcon} alt="삭제" />로 변경하세요 */}
         ×
       </button>
@@ -35,41 +32,38 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: nanoid(),
-      text: "리액트 기초 배우기",
+      text: '리액트 기초 배우기',
       isDone: true,
     },
     {
       id: nanoid(),
-      text: "이미지 사용법 익히기",
+      text: '이미지 사용법 익히기',
       isDone: false,
     },
   ]);
 
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
 
   const handleInputChange = (event) => {
     setInputText(event.target.value);
   };
 
   const handleKeyDown = (event) => {
-    if (
-      event.key !== "Enter" ||
-      event.nativeEvent.isComposing
-    ) {
+    if (event.key !== 'Enter' || event.nativeEvent.isComposing) {
       return;
     }
     handleAddTodo();
   };
 
   const handleAddTodo = () => {
-    if (inputText.trim() === "") return;
+    if (inputText.trim() === '') return;
     const newTodo = {
       id: nanoid(),
       text: inputText,
       isDone: false,
     };
     setTodos((prev) => [...prev, newTodo]);
-    setInputText("");
+    setInputText('');
   };
 
   const handleDelete = (todoId) => {
@@ -79,10 +73,8 @@ function App() {
   const handleToggle = (todoId) => {
     setTodos((prev) =>
       prev.map((todo) =>
-        todo.id === todoId
-          ? { ...todo, isDone: !todo.isDone }
-          : todo
-      )
+        todo.id === todoId ? { ...todo, isDone: !todo.isDone } : todo,
+      ),
     );
   };
 
@@ -100,10 +92,7 @@ function App() {
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
           />
-          <button
-            className="add-button"
-            onClick={handleAddTodo}
-          >
+          <button className="add-button" onClick={handleAddTodo}>
             추가
           </button>
         </div>

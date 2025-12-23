@@ -96,7 +96,7 @@
 
 .filePath {
   display: block;
-  font-family: "Monaco", "Menlo", monospace;
+  font-family: 'Monaco', 'Menlo', monospace;
   font-size: 13px;
   color: #495057;
   background-color: #fff;

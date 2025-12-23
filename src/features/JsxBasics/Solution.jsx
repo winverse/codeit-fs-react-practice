@@ -10,10 +10,7 @@ function TodoApp() {
       {/* 할 일 입력 섹션 */}
       <section>
         {/* JSX 규칙 2: 태그는 항상 닫아주어야 합니다 (셀프 클로징) */}
-        <input
-          type="text"
-          placeholder="새로운 할 일을 입력하세요"
-        />
+        <input type="text" placeholder="새로운 할 일을 입력하세요" />
         <button>추가</button>
       </section>
 

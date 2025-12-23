@@ -97,7 +97,7 @@
 .filePath {
   font-size: 14px;
   color: #666;
-  font-family: "Monaco", "Menlo", "Consolas", monospace;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
   margin: 0;
 }
 

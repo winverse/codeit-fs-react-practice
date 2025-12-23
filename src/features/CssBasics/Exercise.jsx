@@ -12,10 +12,7 @@ function TodoApp() {
 
       {/* TODO 4: className="input-section" 추가 */}
       <section>
-        <input
-          type="text"
-          placeholder="새로운 할 일을 입력하세요"
-        />
+        <input type="text" placeholder="새로운 할 일을 입력하세요" />
         <button>추가</button>
       </section>
 

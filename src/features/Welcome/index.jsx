@@ -1,4 +1,4 @@
-import styles from "./Welcome.module.css";
+import styles from './Welcome.module.css';
 
 export default function Welcome() {
   return (
@@ -14,9 +14,7 @@ export default function Welcome() {
         <ol>
           <li>원하는 주제의 버튼을 클릭하세요</li>
           <li>각 실습 예제를 직접 실행해보세요</li>
-          <li>
-            코드를 수정하며 React의 동작 방식을 이해하세요
-          </li>
+          <li>코드를 수정하며 React의 동작 방식을 이해하세요</li>
         </ol>
       </div>
     </div>

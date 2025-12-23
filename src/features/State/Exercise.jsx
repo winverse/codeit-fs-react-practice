@@ -3,7 +3,7 @@
 // TODO 1: useState를 import 하세요
 // 힌트: import { useState } from 'react';
 
-import "./App.css";
+import './App.css';
 
 function Panel({ children }) {
   return <section className="panel">{children}</section>;
@@ -12,7 +12,7 @@ function Panel({ children }) {
 function App() {
   // TODO 2: todos state를 만드세요
   // 힌트: const [todos, setTodos] = useState(['리액트 기초 배우기', 'State 이해하기']);
-  const todos = ["리액트 기초 배우기", "State 이해하기"];
+  const todos = ['리액트 기초 배우기', 'State 이해하기'];
 
   // TODO 3: inputText state를 만드세요
   // 힌트: const [inputText, setInputText] = useState('');

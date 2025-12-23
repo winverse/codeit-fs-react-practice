@@ -4,14 +4,11 @@
 // TODO 2: 오늘 날짜를 표시하세요
 // TODO 3: 조건부 렌더링을 구현하세요
 
-import "./TodoApp.css";
+import './TodoApp.css';
 
 function TodoApp() {
-  const title = "오늘의 할 일";
-  const todos = [
-    "리액트 기초 배우기",
-    "JSX와 JavaScript 이해하기",
-  ];
+  const title = '오늘의 할 일';
+  const todos = ['리액트 기초 배우기', 'JSX와 JavaScript 이해하기'];
 
   return (
     <div className="app-container">
@@ -20,16 +17,11 @@ function TodoApp() {
         <h1 className="title">제목을 여기에 표시하세요</h1>
 
         {/* TODO 2: new Date().toLocaleDateString()을 사용하여 오늘 날짜 출력 */}
-        <p className="today">
-          오늘은 날짜를 여기에 표시하세요 입니다.
-        </p>
+        <p className="today">오늘은 날짜를 여기에 표시하세요 입니다.</p>
       </div>
 
       <section className="input-section">
-        <input
-          type="text"
-          placeholder="새로운 할 일을 입력하세요"
-        />
+        <input type="text" placeholder="새로운 할 일을 입력하세요" />
         <button>추가</button>
       </section>
 

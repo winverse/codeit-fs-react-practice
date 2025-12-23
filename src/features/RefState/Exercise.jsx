@@ -3,8 +3,8 @@
 // TODO 1: nanoid import 하기
 // 힌트: import { nanoid } from 'nanoid';
 
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react';
+import './App.css';
 
 function Panel({ children }) {
   return <section className="panel">{children}</section>;
@@ -14,15 +14,12 @@ function TodoItem({ todo, onToggle, onDelete }) {
   return (
     <li className="todo-item">
       <span
-        className={`todo-text ${todo.isDone ? "done" : ""}`}
+        className={`todo-text ${todo.isDone ? 'done' : ''}`}
         onClick={() => onToggle(todo.id)}
       >
         {todo.text}
       </span>
-      <button
-        className="delete-button"
-        onClick={() => onDelete(todo.id)}
-      >
+      <button className="delete-button" onClick={() => onDelete(todo.id)}>
         ×
       </button>
     </li>
@@ -33,21 +30,18 @@ function App() {
   // TODO 2: todos state를 객체 배열로 변경하세요
   // 힌트: { id: nanoid(), text: '...', isDone: false }
   const [todos, setTodos] = useState([
-    "리액트 기초 배우기",
-    "참조형 State 이해하기",
+    '리액트 기초 배우기',
+    '참조형 State 이해하기',
   ]);
 
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
 
   const handleInputChange = (event) => {
     setInputText(event.target.value);
   };
 
   const handleKeyDown = (event) => {
-    if (
-      event.key !== "Enter" ||
-      event.nativeEvent.isComposing
-    ) {
+    if (event.key !== 'Enter' || event.nativeEvent.isComposing) {
       return;
     }
     handleAddTodo();
@@ -56,9 +50,9 @@ function App() {
   // TODO 3: handleAddTodo 수정
   // 힌트: newTodo 객체 생성 { id: nanoid(), text: inputText, isDone: false }
   const handleAddTodo = () => {
-    if (inputText.trim() === "") return;
+    if (inputText.trim() === '') return;
     setTodos((prev) => [...prev, inputText]); // 문자열 대신 객체로 변경하세요
-    setInputText("");
+    setInputText('');
   };
 
   // TODO 4: handleDelete 함수 구현
@@ -87,10 +81,7 @@ function App() {
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
           />
-          <button
-            className="add-button"
-            onClick={handleAddTodo}
-          >
+          <button className="add-button" onClick={handleAddTodo}>
             추가
           </button>
         </div>

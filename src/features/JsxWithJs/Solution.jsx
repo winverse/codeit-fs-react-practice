@@ -1,13 +1,10 @@
 // ✅ 정답 코드입니다
 
-import "./TodoApp.css";
+import './TodoApp.css';
 
 function TodoApp() {
-  const title = "오늘의 할 일";
-  const todos = [
-    "리액트 기초 배우기",
-    "JSX와 JavaScript 이해하기",
-  ];
+  const title = '오늘의 할 일';
+  const todos = ['리액트 기초 배우기', 'JSX와 JavaScript 이해하기'];
 
   return (
     <div className="app-container">
@@ -22,19 +19,14 @@ function TodoApp() {
       </div>
 
       <section className="input-section">
-        <input
-          type="text"
-          placeholder="새로운 할 일을 입력하세요"
-        />
+        <input type="text" placeholder="새로운 할 일을 입력하세요" />
         <button>추가</button>
       </section>
 
       <section className="list-section">
         {/* 조건부 렌더링: 삼항 연산자 사용 */}
         {todos.length === 0 ? (
-          <p className="no-todos">
-            할 일이 없어요! 새 할 일을 추가해보세요.
-          </p>
+          <p className="no-todos">할 일이 없어요! 새 할 일을 추가해보세요.</p>
         ) : (
           <ul className="todo-list">
             {todos.map((todo, index) => (

@@ -1,4 +1,4 @@
-import "./App.css";
+import './App.css';
 
 // Panel 컴포넌트: children을 받아서 감싸는 레이아웃 역할
 function Panel({ children }) {
@@ -7,9 +7,9 @@ function Panel({ children }) {
 
 function App() {
   const todos = [
-    { id: 1, text: "리액트 기초 배우기" },
-    { id: 2, text: "Children 이해하기" },
-    { id: 3, text: "To-Do List 만들어보기" },
+    { id: 1, text: '리액트 기초 배우기' },
+    { id: 2, text: 'Children 이해하기' },
+    { id: 3, text: 'To-Do List 만들어보기' },
   ];
 
   return (
@@ -19,10 +19,7 @@ function App() {
       {/* Panel로 입력 구역을 감싸기 */}
       <Panel>
         <section className="input-section">
-          <input
-            type="text"
-            placeholder="새로운 할 일을 입력하세요"
-          />
+          <input type="text" placeholder="새로운 할 일을 입력하세요" />
           <button>추가</button>
         </section>
       </Panel>

@@ -1,6 +1,6 @@
 // ✅ 정답 코드입니다
 
-import "./TodoApp.css"; // CSS 파일 불러오기
+import './TodoApp.css'; // CSS 파일 불러오기
 
 function TodoApp() {
   return (
@@ -8,10 +8,7 @@ function TodoApp() {
       <h1 className="title">오늘의 할 일</h1>
 
       <section className="input-section">
-        <input
-          type="text"
-          placeholder="새로운 할 일을 입력하세요"
-        />
+        <input type="text" placeholder="새로운 할 일을 입력하세요" />
         <button>추가</button>
       </section>
 

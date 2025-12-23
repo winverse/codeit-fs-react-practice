@@ -1,6 +1,6 @@
-import Exercise from "./Exercise";
-import Solution from "./Solution";
-import styles from "./ImageUsage.module.css";
+import Exercise from './Exercise';
+import Solution from './Solution';
+import styles from './ImageUsage.module.css';
 
 export default function ImageUsage() {
   return (
@@ -12,8 +12,7 @@ export default function ImageUsage() {
       <div className={styles.goal}>
         <h2 className={styles.goalTitle}>📌 목표</h2>
         <p className={styles.goalText}>
-          React에서 이미지 파일을 import해서 사용하는 방법을
-          배워보세요.
+          React에서 이미지 파일을 import해서 사용하는 방법을 배워보세요.
         </p>
         <ul className={styles.requirements}>
           <li>SVG 파일을 import 하기</li>
@@ -23,18 +22,14 @@ export default function ImageUsage() {
       </div>
 
       <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>
-          🔍 현재 모습
-        </h2>
+        <h2 className={styles.previewTitle}>🔍 현재 모습</h2>
         <div className={styles.previewBox}>
           <Exercise />
         </div>
       </div>
 
       <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>
-          ✅ 완성 결과
-        </h2>
+        <h2 className={styles.previewTitle}>✅ 완성 결과</h2>
         <div className={styles.previewBox}>
           <Solution />
         </div>
@@ -45,9 +40,7 @@ export default function ImageUsage() {
           <span className={styles.fileIcon}>📁</span>
           <span className={styles.fileName}>작업 파일</span>
         </div>
-        <p className={styles.filePath}>
-          src/features/ImageUsage/Exercise.jsx
-        </p>
+        <p className={styles.filePath}>src/features/ImageUsage/Exercise.jsx</p>
       </div>
 
       <div className={styles.hint}>
@@ -59,13 +52,13 @@ export default function ImageUsage() {
         import한 변수를 img 태그의 src 속성에 넣으면 됩니다.
         <br />
         <br />
-        <strong>참고:</strong> react-icons 라이브러리를
-        사용하면 더 다양한 아이콘을 쉽게 사용할 수 있습니다!
+        <strong>참고:</strong> react-icons 라이브러리를 사용하면 더 다양한
+        아이콘을 쉽게 사용할 수 있습니다!
         <br />
         설치: npm install react-icons
         <br />
-        사용: import &#123; FaTrash &#125; from
-        'react-icons/fa'; → &lt;FaTrash /&gt;
+        사용: import &#123; FaTrash &#125; from 'react-icons/fa'; → &lt;FaTrash
+        /&gt;
       </div>
     </div>
   );
