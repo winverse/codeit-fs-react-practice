@@ -1,6 +1,6 @@
 import styles from "./JsxBasics.module.css";
 import Solution from "./Solution";
-// import Exersise from './Exercise'; // 코드 수정후에 주석을 해제해주세요! */}
+// import Exercise from './Exercise'; // 코드 수정후에 주석을 해제해주세요! */}
 
 export default function JsxBasics() {
   return (
