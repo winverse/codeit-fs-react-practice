@@ -1,18 +1,15 @@
-# React + Vite
+# React 학습 플레이그라운드
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+17번 과정의 주제별 문제 해결 실습입니다. 처음 한 번만 설치하고 같은
+`main` 브랜치에서 계속 사용합니다.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. 화면 위쪽에서 강의와 같은 이름의 버튼을 선택합니다.
+2. 화면에 표시된 작업 파일과 요구 사항을 확인합니다.
+3. 해당 `Exercise.jsx`를 수정하고 브라우저에서 결과를 확인합니다.
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+정답 코드는 학생용 저장소와 앱 번들에 포함하지 않습니다.

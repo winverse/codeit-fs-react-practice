@@ -1,5 +1,4 @@
 import styles from './Fragment.module.css';
-import Solution from './Solution';
 import Exercise from './Exercise';
 
 export default function Fragment() {
@@ -30,13 +29,6 @@ export default function Fragment() {
         <h3 className={styles.previewTitle}>👀 현재 모습</h3>
         <div className={styles.previewBox}>
           <Exercise />
-        </div>
-      </div>
-
-      <div className={styles.preview}>
-        <h3 className={styles.previewTitle}>✨ 완성 결과</h3>
-        <div className={styles.previewBox}>
-          <Solution />
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 import styles from './JsxBasics.module.css';
-import Solution from './Solution';
-// import Exercise from './Exercise'; // 코드 수정후에 주석을 해제해주세요! */}
+import Exercise from './Exercise';
 
 export default function JsxBasics() {
   return (
@@ -25,14 +24,7 @@ export default function JsxBasics() {
       <div className={styles.preview}>
         <h3 className={styles.previewTitle}>👀 현재 모습</h3>
         <div className={styles.previewBox}>
-          {/* <Exercise /> // 코드 수정후에 주석을 해제해주세요! */}
-        </div>
-      </div>
-
-      <div className={styles.preview}>
-        <h3 className={styles.previewTitle}>✨ 완성 결과</h3>
-        <div className={styles.previewBox}>
-          <Solution />
+          <Exercise />
         </div>
       </div>
 

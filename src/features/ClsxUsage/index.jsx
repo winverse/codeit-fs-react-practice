@@ -1,5 +1,4 @@
 import Exercise from './Exercise/Exercise';
-import Solution from './Solution/Solution';
 import styles from './ClsxUsage.module.css';
 
 export default function ClsxUsage() {
@@ -26,13 +25,6 @@ export default function ClsxUsage() {
         <h2 className={styles.previewTitle}>🔍 현재 모습 (문자열 템플릿)</h2>
         <div className={styles.previewBox}>
           <Exercise />
-        </div>
-      </div>
-
-      <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>✅ 완성 결과 (clsx 사용)</h2>
-        <div className={styles.previewBox}>
-          <Solution />
         </div>
       </div>
 

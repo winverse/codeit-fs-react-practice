@@ -1,5 +1,4 @@
 import Exercise from './Exercise';
-import Solution from './Solution';
 import styles from './ImageUsage.module.css';
 
 export default function ImageUsage() {
@@ -25,13 +24,6 @@ export default function ImageUsage() {
         <h2 className={styles.previewTitle}>🔍 현재 모습</h2>
         <div className={styles.previewBox}>
           <Exercise />
-        </div>
-      </div>
-
-      <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>✅ 완성 결과</h2>
-        <div className={styles.previewBox}>
-          <Solution />
         </div>
       </div>
 

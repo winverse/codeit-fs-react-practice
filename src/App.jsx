@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import Welcome from './features/Welcome';
-import Placeholder from './features/Placeholder';
 import JsxBasics from './features/JsxBasics';
 import CssBasics from './features/CssBasics';
 import JsxWithJs from './features/JsxWithJs';
@@ -14,59 +13,25 @@ import ImageUsage from './features/ImageUsage';
 import CssModule from './features/CssModule';
 import ClsxUsage from './features/ClsxUsage';
 
+const sections = [
+  { id: 'jsx', label: 'JSX 기초', component: JsxBasics },
+  { id: 'css', label: 'CSS 스타일', component: CssBasics },
+  { id: 'jsxjs', label: 'JSX+JavaScript', component: JsxWithJs },
+  { id: 'props', label: 'Props', component: Props },
+  { id: 'fragment', label: 'Fragment', component: Fragment },
+  { id: 'children', label: 'Children', component: Children },
+  { id: 'state', label: 'State', component: State },
+  { id: 'refstate', label: '참조형 State', component: RefState },
+  { id: 'image', label: '이미지 사용', component: ImageUsage },
+  { id: 'cssmodule', label: 'CSS Module', component: CssModule },
+  { id: 'clsx', label: 'clsx', component: ClsxUsage },
+];
+
 function App() {
   const [activeSection, setActiveSection] = useState(null);
 
-  const sections = [
-    { id: 'jsx', label: 'JSX 기초' },
-    { id: 'css', label: 'CSS 스타일' },
-    { id: 'jsxjs', label: 'JSX+JavaScript' },
-    { id: 'props', label: 'Props' },
-    { id: 'fragment', label: 'Fragment' },
-    { id: 'children', label: 'Children' },
-    { id: 'state', label: 'State' },
-    { id: 'refstate', label: '참조형 State' },
-    { id: 'image', label: '이미지 사용' },
-    { id: 'cssmodule', label: 'CSS Module' },
-    { id: 'clsx', label: 'clsx' },
-  ];
-
-  const renderContent = () => {
-    if (!activeSection) {
-      return <Welcome />;
-    }
-
-    const sectionTitle =
-      sections.find((s) => s.id === activeSection)?.label ?? '기본값';
-
-    // 각 섹션별 컴포넌트 렌더링
-    switch (activeSection) {
-      case 'jsx':
-        return <JsxBasics />;
-      case 'css':
-        return <CssBasics />;
-      case 'jsxjs':
-        return <JsxWithJs />;
-      case 'props':
-        return <Props />;
-      case 'fragment':
-        return <Fragment />;
-      case 'children':
-        return <Children />;
-      case 'state':
-        return <State />;
-      case 'refstate':
-        return <RefState />;
-      case 'image':
-        return <ImageUsage />;
-      case 'cssmodule':
-        return <CssModule />;
-      case 'clsx':
-        return <ClsxUsage />;
-      default:
-        return <Placeholder title={sectionTitle} />;
-    }
-  };
+  const activeItem = sections.find((section) => section.id === activeSection);
+  const ActiveSection = activeItem?.component;
 
   return (
     <div className={styles.container}>
@@ -91,7 +56,9 @@ function App() {
         ))}
       </nav>
 
-      <main className={styles.content}>{renderContent()}</main>
+      <main className={styles.content}>
+        {ActiveSection ? <ActiveSection /> : <Welcome />}
+      </main>
     </div>
   );
 }

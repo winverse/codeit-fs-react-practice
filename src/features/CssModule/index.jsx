@@ -1,5 +1,4 @@
 import Exercise from './Exercise/Exercise';
-import Solution from './Solution/Solution';
 import styles from './CssModule.module.css';
 
 export default function CssModule() {
@@ -34,13 +33,6 @@ export default function CssModule() {
         <h2 className={styles.previewTitle}>🔍 현재 모습 (일반 CSS)</h2>
         <div className={styles.previewBox}>
           <Exercise />
-        </div>
-      </div>
-
-      <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>✅ 완성 결과 (CSS Module)</h2>
-        <div className={styles.previewBox}>
-          <Solution />
         </div>
       </div>
 
