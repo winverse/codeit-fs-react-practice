@@ -23,7 +23,8 @@ export default function State() {
             컴포넌트 만들기
           </li>
           <li>
-            <code>handleAddTodo</code> 함수로 할 일 추가 기능 구현
+            <code>form</code>의 <code>onSubmit</code>과{' '}
+            <code>handleSubmit</code>으로 할 일 추가 기능 구현
           </li>
           <li>
             Enter 키 처리 시 한글 입력 중(

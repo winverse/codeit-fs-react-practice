@@ -42,15 +42,7 @@ export default function ImageUsage() {
         이미지 파일도 JS 모듈처럼 import할 수 있습니다.
         <br />
         import한 변수를 img 태그의 src 속성에 넣으면 됩니다.
-        <br />
-        <br />
-        <strong>참고:</strong> react-icons 라이브러리를 사용하면 더 다양한
-        아이콘을 쉽게 사용할 수 있습니다!
-        <br />
-        설치: npm install react-icons
-        <br />
-        사용: import &#123; FaTrash &#125; from 'react-icons/fa'; → &lt;FaTrash
-        /&gt;
+        <br />이 실습에서는 제공된 <code>trash.svg</code>를 사용하세요.
       </div>
     </div>
   );

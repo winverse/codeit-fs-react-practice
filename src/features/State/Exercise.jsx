@@ -20,19 +20,21 @@ function App() {
   // TODO 4: input 값이 바뀔 때마다 상태 업데이트하는 함수
   // 힌트: const handleInputChange = (event) => { setInputText(event.target.value); }
 
-  // TODO 5: Enter 키 처리 함수
-  // 힌트: event.key === 'Enter' && !event.nativeEvent.isComposing 체크
-  const handleKeyDown = (event) => {
-    // 여기에 구현하세요
+  // TODO 5: 한글 조합 중 Enter 키로 폼이 제출되지 않게 하세요
+  const handleInputKeyDown = (event) => {
+    if (event.nativeEvent.isComposing && event.key === 'Enter') {
+      event.preventDefault();
+    }
   };
 
-  // TODO 6: '추가' 버튼 클릭 시 todos 업데이트하는 함수
+  // TODO 6: 폼 제출 시 todos를 업데이트하는 함수
   // 힌트:
+  // - event.preventDefault()
   // - inputText.trim() === '' 체크
-  // - setTodos((prev) => [...prev, inputText])
+  // - setTodos((prev) => [...prev, inputText.trim()])
   // - setInputText('')
-  const handleAddTodo = () => {
-    // 여기에 구현하세요
+  const handleSubmit = (event) => {
+    event.preventDefault();
   };
 
   return (
@@ -40,22 +42,24 @@ function App() {
       <h1 className="title">오늘의 할 일</h1>
 
       <Panel>
-        <div className="input-container">
+        <form className="input-container" onSubmit={handleSubmit}>
+          <label className="visually-hidden" htmlFor="todo-input">
+            새 할 일
+          </label>
           <input
+            id="todo-input"
+            name="todo"
             type="text"
             className="todo-input"
             placeholder="새로운 할 일을 입력하세요"
             // TODO 7: value={inputText} 추가
             // TODO 8: onChange={handleInputChange} 추가
-            // TODO 9: onKeyDown={handleKeyDown} 추가
+            // TODO 9: onKeyDown={handleInputKeyDown} 추가
           />
-          <button
-            className="add-button"
-            // TODO 10: onClick={handleAddTodo} 추가
-          >
+          <button type="submit" className="add-button">
             추가
           </button>
-        </div>
+        </form>
       </Panel>
 
       <Panel>
