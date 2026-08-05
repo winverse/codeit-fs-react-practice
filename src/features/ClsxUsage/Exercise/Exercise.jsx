@@ -29,10 +29,12 @@ function TodoItem({ todo, onToggle, onDelete }) {
         {todo.text}
       </span>
       <button
+        type="button"
         className={todoItemStyles.deleteButton}
+        aria-label={`${todo.text} 삭제`}
         onClick={() => onDelete(todo.id)}
       >
-        <img src={trashIcon} alt="삭제" />
+        <img src={trashIcon} alt="" />
       </button>
     </li>
   );

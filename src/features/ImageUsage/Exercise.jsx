@@ -20,8 +20,13 @@ function TodoItem({ todo, onToggle, onDelete }) {
       >
         {todo.text}
       </span>
-      <button className="delete-button" onClick={() => onDelete(todo.id)}>
-        {/* TODO 2: 텍스트(×) 대신 <img src={trashIcon} alt="삭제" />로 변경하세요 */}
+      <button
+        type="button"
+        className="delete-button"
+        aria-label={`${todo.text} 삭제`}
+        onClick={() => onDelete(todo.id)}
+      >
+        {/* TODO 2: 텍스트(×) 대신 <img src={trashIcon} alt="" />로 변경하세요 */}
         ×
       </button>
     </li>
