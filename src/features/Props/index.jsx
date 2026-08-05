@@ -28,19 +28,19 @@ export default function Props() {
         </ul>
       </div>
 
-      <div className={styles.preview}>
-        <h3 className={styles.previewTitle}>👀 현재 모습</h3>
-        <div className={styles.previewBox}>
-          <Exercise />
-        </div>
-      </div>
-
       <div className={styles.fileBox}>
         <div className={styles.fileHeader}>
           <span className={styles.fileIcon}>📁</span>
           <span className={styles.fileName}>작업 파일</span>
         </div>
         <code className={styles.filePath}>src/features/Props/Exercise.jsx</code>
+      </div>
+
+      <div className={styles.preview}>
+        <h3 className={styles.previewTitle}>👀 현재 모습</h3>
+        <div className={styles.previewBox}>
+          <Exercise />
+        </div>
       </div>
 
       <div className={styles.hint}>

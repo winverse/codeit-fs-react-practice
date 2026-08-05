@@ -21,13 +21,6 @@ export default function ClsxUsage() {
         </ul>
       </div>
 
-      <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>🔍 현재 모습 (문자열 템플릿)</h2>
-        <div className={styles.previewBox}>
-          <Exercise />
-        </div>
-      </div>
-
       <div className={styles.fileBox}>
         <div className={styles.fileHeader}>
           <span className={styles.fileIcon}>📁</span>
@@ -36,6 +29,13 @@ export default function ClsxUsage() {
         <p className={styles.filePath}>
           src/features/ClsxUsage/Exercise/Exercise.jsx
         </p>
+      </div>
+
+      <div className={styles.preview}>
+        <h2 className={styles.previewTitle}>🔍 현재 모습 (문자열 템플릿)</h2>
+        <div className={styles.previewBox}>
+          <Exercise />
+        </div>
       </div>
 
       <div className={styles.hint}>

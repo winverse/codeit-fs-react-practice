@@ -29,13 +29,6 @@ export default function CssModule() {
         </ul>
       </div>
 
-      <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>🔍 현재 모습 (일반 CSS)</h2>
-        <div className={styles.previewBox}>
-          <Exercise />
-        </div>
-      </div>
-
       <div className={styles.fileBox}>
         <div className={styles.fileHeader}>
           <span className={styles.fileIcon}>📁</span>
@@ -44,6 +37,13 @@ export default function CssModule() {
         <p className={styles.filePath}>
           src/features/CssModule/Exercise/Exercise.jsx
         </p>
+      </div>
+
+      <div className={styles.preview}>
+        <h2 className={styles.previewTitle}>🔍 현재 모습 (일반 CSS)</h2>
+        <div className={styles.previewBox}>
+          <Exercise />
+        </div>
       </div>
 
       <div className={styles.hint}>

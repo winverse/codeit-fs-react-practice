@@ -20,19 +20,19 @@ export default function ImageUsage() {
         </ul>
       </div>
 
-      <div className={styles.preview}>
-        <h2 className={styles.previewTitle}>🔍 현재 모습</h2>
-        <div className={styles.previewBox}>
-          <Exercise />
-        </div>
-      </div>
-
       <div className={styles.fileBox}>
         <div className={styles.fileHeader}>
           <span className={styles.fileIcon}>📁</span>
           <span className={styles.fileName}>작업 파일</span>
         </div>
         <p className={styles.filePath}>src/features/ImageUsage/Exercise.jsx</p>
+      </div>
+
+      <div className={styles.preview}>
+        <h2 className={styles.previewTitle}>🔍 현재 모습</h2>
+        <div className={styles.previewBox}>
+          <Exercise />
+        </div>
       </div>
 
       <div className={styles.hint}>

@@ -25,13 +25,6 @@ export default function Children() {
         </ul>
       </div>
 
-      <div className={styles.preview}>
-        <h3 className={styles.previewTitle}>👀 현재 모습</h3>
-        <div className={styles.previewBox}>
-          <Exercise />
-        </div>
-      </div>
-
       <div className={styles.fileBox}>
         <div className={styles.fileHeader}>
           <span className={styles.fileIcon}>📁</span>
@@ -40,6 +33,13 @@ export default function Children() {
         <code className={styles.filePath}>
           src/features/Children/Exercise.jsx
         </code>
+      </div>
+
+      <div className={styles.preview}>
+        <h3 className={styles.previewTitle}>👀 현재 모습</h3>
+        <div className={styles.previewBox}>
+          <Exercise />
+        </div>
       </div>
 
       <div className={styles.hint}>
