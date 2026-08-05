@@ -14,7 +14,7 @@ export default function CssModule() {
           일반 CSS의 전역 스타일 오염 문제를 CSS Module로 해결해보세요.
         </p>
         <ul className={styles.requirements}>
-          <li>일반 CSS 파일(.css)을 CSS Module 파일(.module.css)로 변경하기</li>
+          <li>준비된 CSS Module 파일(.module.css) 사용하기</li>
           <li>
             CSS Module을 import 하기 (import styles from './파일.module.css')
           </li>
@@ -61,7 +61,7 @@ export default function CssModule() {
         <br />
         <strong>CSS Module의 해결책:</strong>
         <br />
-        • 파일명을 *.module.css로 변경
+        • 파일명이 *.module.css인 파일 사용
         <br />
         • import styles from './파일.module.css'로 import
         <br />

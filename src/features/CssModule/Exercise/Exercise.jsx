@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import trashIcon from '../../ImageUsage/assets/trash.svg';
 
-// TODO 1: 일반 CSS import를 CSS Module import로 변경하세요
-// 현재: import './Panel.css';
-// 변경: import styles from './Panel.module.css';
+// TODO 1: 아래 일반 CSS import를 준비된 CSS Module import로 변경하세요
+// import panelStyles from './Panel.module.css';
+// import todoItemStyles from './TodoItem.module.css';
+// import appStyles from './App.module.css';
 import './Panel.css';
 import './TodoItem.css';
 import './App.css';
@@ -14,13 +15,13 @@ import './App.css';
 function Panel({ children }) {
   // TODO 2: className을 CSS Module 방식으로 변경하세요
   // 현재: className="panel"
-  // 변경: className={styles.panel}
+  // 변경: className={panelStyles.panel}
   return <section className="panel">{children}</section>;
 }
 
 function TodoItem({ todo, onToggle, onDelete }) {
   return (
-    // TODO 3: TodoItem의 className들을 CSS Module 방식으로 변경하세요
+    // TODO 3: TodoItem의 className들을 todoItemStyles로 변경하세요
     <li className="todoItem">
       <span
         className={`todoText ${todo.isDone ? 'done' : ''}`}
@@ -86,7 +87,7 @@ function App() {
   };
 
   return (
-    // TODO 4: App의 className들을 CSS Module 방식으로 변경하세요
+    // TODO 4: App의 className들을 appStyles로 변경하세요
     <div className="appContainer">
       <div className="titleContainer">
         <h1 className="title">오늘의 할 일</h1>
